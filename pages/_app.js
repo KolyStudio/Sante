@@ -22,11 +22,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Script
+      <Script id="ga"
           async
           src={`${ga}${site.ga_pixel}`}
         />
-        <Script
+        <Script id="ga2"
           dangerouslySetInnerHTML={{
             __html: `
                   window.dataLayer = window.dataLayer || [];
