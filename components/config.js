@@ -2,7 +2,7 @@ export const site = {
   nom: "Biorea",
   email: "contact@biorea.co",
   adresse: "biorea.co",
-  fb_pixel: "208771578104110",
+  fb_pixel: "419669543254467",
   ga_pixel: "G-PX8ZB89E9G",
   checkoutx: "https://secure.biorea.co/f/4DGH4K3Q/b/",
   offre: "WINTER SALES: ENJOY 50% OFF & FREE SHIPPING",
