@@ -1,7 +1,50 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Layout from "../components/Layout";
+import { useEffect } from "react";
+import Head from "next/head";
+import Script from 'next/script'
+import { site } from "../components/config";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+  
+  const ga = 'https://www.googletagmanager.com/gtag/js?id='
 
-export default MyApp
+
+  useEffect(async () => {
+    const { default: ReactPixel } = await import("react-facebook-pixel");
+    ReactPixel.init(site.fb_pixel, null, {
+      autoConfig: true,
+      debug: true,
+    });
+    ReactPixel.pageView();
+    ReactPixel.track("ViewContent");
+  });
+
+  return (
+    <>
+      <Script
+          async
+          src={`${ga}${site.ga_pixel}`}
+        />
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-1K9RD8L7M5', {
+                  page_path: window.location.pathname,
+                  });
+              `,
+          }}
+        />
+      <Layout>
+        <Head>
+          <link rel='icon' type='image/png' href='/favicon.png' />
+        </Head>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  );
+}
+export default MyApp;
