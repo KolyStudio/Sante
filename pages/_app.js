@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', 'G-1K9RD8L7M5', {
+                  gtag('config', 'G-PX8ZB89E9G', {
                   page_path: window.location.pathname,
                   });
               `,
