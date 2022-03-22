@@ -22,25 +22,26 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Script id="ga"
-          async
-          src={`${ga}${site.ga_pixel}`}
-        />
-        <Script id="ga2"
-          dangerouslySetInnerHTML={{
-            __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-PX8ZB89E9G', {
-                  page_path: window.location.pathname,
-                  });
-              `,
-          }}
-        />
+      
       <Layout>
         <Head>
-          <link rel='icon' type='image/png' href='/favicon.png' />
+        <link rel='icon' type='image/png' href='/favicon.png' />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-PX8ZB89E9G`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-PX8ZB89E9G', {
+                        page_path: window.location.pathname,
+                        });
+                    `,
+            }}
+          />
         </Head>
         <Component {...pageProps} />
       </Layout>
