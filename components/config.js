@@ -10,7 +10,7 @@ export const site = {
 
 export const produit = {
   name: "Skin Tags Removal Kit",
-  price: 29.99,
+  price: 24.99,
   id: 26,
   review: 236,
   note: 4.8,
