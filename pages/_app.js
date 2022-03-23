@@ -63,7 +63,7 @@ function MyApp({ Component, pageProps }) {
             }}
           />
         </Head>
-        <Component {...pageProps} />
+        <Component {...pageProps} key={router.asPath} />
       </Layout>
     </>
   );
