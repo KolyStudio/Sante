@@ -6,7 +6,7 @@ import Script from 'next/script'
 import { site } from "../components/config";
 import * as ga from "../utils/ga";
 
-
+import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
 
 
@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       autoConfig: true,
       debug: true,
     });
-    import { useRouter } from "next/router";
+  
     ReactPixel.pageView();
     ReactPixel.track("ViewContent");
   });
