@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import SEO from "../components/seo";
 class MyDocument extends Document {
   render() {
     return (
