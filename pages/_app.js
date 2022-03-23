@@ -16,10 +16,11 @@ function MyApp({ Component, pageProps }) {
       autoConfig: true,
       debug: true,
     });
+    import { useRouter } from "next/router";
     ReactPixel.pageView();
     ReactPixel.track("ViewContent");
   });
-
+  const router = useRouter();
   useEffect(() => {
 
 
