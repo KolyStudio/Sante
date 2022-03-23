@@ -22,6 +22,20 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+ 
+<Script
+        src='https://www.googletagmanager.com/gtag/js?id=G-PX8ZB89E9G'
+        strategy='afterInteractive'
+      />
+      <Script id='google-analytics' strategy='afterInteractive'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-PX8ZB89E9G');
+        `}
+      </Script>
       
       <Layout>
         <Head>
@@ -30,18 +44,7 @@ function MyApp({ Component, pageProps }) {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=G-PX8ZB89E9G`}
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-PX8ZB89E9G', {
-                        page_path: window.location.pathname,
-                        });
-                    `,
-            }}
-          />
+         
         </Head>
         <Component {...pageProps} />
       </Layout>
