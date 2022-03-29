@@ -15,7 +15,7 @@ export default function Benefices() {
 
         <img
           alt='benefice'
-          src='produits/benefice/benefice_1.png'
+          src='produits/benefice/benefice_1.webp'
           className='m-auto -mb-20 block w-[200px] lg:hidden'
         />
 
@@ -87,7 +87,7 @@ export default function Benefices() {
           <article className='hidden lg:block'>
             <img
               alt='benefice'
-              src='produits/benefice/benefice_1.png'
+              src='produits/benefice/benefice_1.webp'
               className='m-auto w-[350px]'
             />
           </article>
