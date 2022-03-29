@@ -14,7 +14,7 @@ export const produit = {
   id: 26,
   review: 236,
   note: 4.8,
-  description: "We developed a harmless method to remove unattractive skin tags that does not cause bleeding or scarring. This allows you to eliminate a huge beauty complex! <br><br>One kit can treat between 10 and 20 skin tags",
+  description: "We developed a harmless method to remove unattractive skin tags that does not cause bleeding or scarring. This allows you to eliminate a huge beauty complex! <br><br>One kit can treat your skin tags between 4 and 7 days",
   small_argument1: "Save your time from Surgery",
   small_argument2: "Easy to use",
   small_argument3: "Results in just days",
