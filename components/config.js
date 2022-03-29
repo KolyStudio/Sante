@@ -9,7 +9,7 @@ export const site = {
 };
 
 export const produit = {
-  name: "Skin Tags Removal Kit",
+  name: "Elastag™ Auto Skin Tag Removing Kit",
   price: 24.99,
   id: 26,
   review: 236,
